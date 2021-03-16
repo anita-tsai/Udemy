@@ -1,10 +1,16 @@
-/*topic*/
+// 1) DOM : document. Document is something that a browser  
+// creates to allow us to modify the HTML and CSS
 
-// 1) change all the HTML elements in the page
-// 2) change all the HTML attributes in the page
-// 3) change all the CSS styles in the page
-// 4) remove existing HTML elements and attributes
-// 5) add new HTML elements and attributes
-// 6) JavaScript can react to all existing HTML events in the page
-// 7) JavaScript can create new HTML events in the page
+// import { object } from "prop-types";
 
+// the HTML and CSS
+// document.write('helllllo'); // hellllo
+
+// 2)document is the screen that we see in the browser,
+// and the document as I mentioned is just an object.
+
+// 3)window: It is an object with a whole ton of properties 
+// and it is also a parent object of DOM.
+
+//4)window.alert('check check'); // it will alert a window and show some 
+// strings like 'check check'.
