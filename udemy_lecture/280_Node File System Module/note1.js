@@ -12,7 +12,7 @@
     
 
 
-
+/* READ -> fs.readFile() */
 // 2) create a new file named hello.txt
 // 1. in hello.txt
 // hellloooo there!!!
@@ -34,6 +34,8 @@
 // node script.js
 // you'll see 
 // <Buffer 68 65 6c 6c 6c 6f 6f 6f 20 74 68 65 72 65 21 21 21> in bash
+// notice: if no encoding is specified, 
+// then the raw buffer is returned.
 
 // 4. in script.js
 const fs = require('fs');

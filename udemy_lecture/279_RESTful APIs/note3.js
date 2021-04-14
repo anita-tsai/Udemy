@@ -12,7 +12,7 @@
       //   </body>
       // </html>
 
-// 3.
+// 3. in script.js
 const express = require('express');
 const bodyParser = require('body-parser');
 
