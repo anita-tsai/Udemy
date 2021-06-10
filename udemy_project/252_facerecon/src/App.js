@@ -69,26 +69,27 @@ const particleOptions = {
   }
 }
 
+const initialState = {
+  input: '',
+  imgUrl: '',
+  box: {},
+  route: 'signin',
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '',
+    email: '',
+    entries: 0,
+    joined: ''
+  }
+}
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      input: '',
-      imgUrl: '',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        // email: '',
-        id: '',
-        name: '',
-        email: '',
-        //  password: 'bananas',
-        entries: 0,
-        joined: ''
-      }
+    this.state = initialState;
     }
-  }
+  
 
   loadUser = (data) => {
     console.log(data)
@@ -159,14 +160,14 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({ isSignedIn: false })
+      this.setState(initialState)
     } else if (route === 'home') {
       this.setState({ isSignedIn: true})
     }
     this.setState({ route }); //({ route:route })
   }
 
-  render () {
+  render() {
     const { isSignedIn, imgUrl, route, box } = this.state;
     return (
       <div className="App">
@@ -177,7 +178,7 @@ class App extends Component {
         {route === 'home' 
           ? <div>
               <Logo />
-              <Rank name={this.state.user.name} entries={this.state.user.entries}/>
+              <Rank name={this.state.user.name} entries={this.state.user.entries} />
               <ImageLinkForm 
                 onInputChange={this.onInputChange} 
                 onPictureSubmit={this.onPictureSubmit} 
