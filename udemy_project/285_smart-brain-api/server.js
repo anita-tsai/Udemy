@@ -10,7 +10,7 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-
+// knex builds our SQL statement for us
 const db = knex({
   client: 'pg',
   connection: {
@@ -21,7 +21,7 @@ const db = knex({
   }
 });
 
-// knex builds our SQL statement for us
+
 db.select('*').from ('users').then(data => {
   console.log(data);
 }); 
