@@ -134,7 +134,7 @@ class App extends Component {
     this.setState({ imgUrl:this.state.input });
       // move clarifi api call from here to backend due to api key security
       // so that we need to pass the image url to backend
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://cryptic-brushlands-02929.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -145,7 +145,7 @@ class App extends Component {
       .then(response => {
         console.log(response)
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://cryptic-brushlands-02929.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
