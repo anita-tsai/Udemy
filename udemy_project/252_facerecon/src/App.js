@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 import Navigation from './Components/Navigation/Navigation';
 import Signin from './Components/Signin/Signin'
 import Register from './Components/Register/Register'
-import Clarifai from 'clarifai';
+// import Clarifai from 'clarifai';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
@@ -24,9 +24,7 @@ import { Component } from 'react';
 //   }
 // }
 
-const app = new Clarifai.App({
-  apiKey: 'c2d799a9bdcf46cd947a8487df16d627'
- });
+
 
 const particleOptions = {
   particles: {
@@ -134,10 +132,16 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imgUrl:this.state.input });
-    app.models
-      .predict(
-        Clarifai.FACE_DETECT_MODEL, 
-        this.state.input)
+      // move clarifi api call from here to backend due to api key security
+      // so that we need to pass the image url to backend
+      fetch('http://localhost:3000/imageurl', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          input: this.state.input
+        })
+      })
+      .then(response => response.json())
       .then(response => {
         console.log(response)
         if(response) {
