@@ -14,10 +14,13 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1', // it equals to localhost, home
-    user : 'anitatsai',
-    password : '',
-    database : 'smart-brain'
+    connectionString : process.env.DATABASE_URL, // it is changed from localhost to heroku
+    // user : 'anitatsai',
+    // password : '',
+    // database : 'smart-brain'
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
 });
 
