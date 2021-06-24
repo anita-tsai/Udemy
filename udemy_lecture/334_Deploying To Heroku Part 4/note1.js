@@ -21,3 +21,26 @@
 // $ git add .
 // $ git commit -m "deploy"
 // $ git push heroku main
+// $ heroku open (link to website)
+
+
+
+// 3) test the website
+
+
+// 4) for security concern (to hide the API key)
+// 1. in heroku
+// click personal -> backend -> settings 
+// -> Config Vars
+// KEY: API_CLARIFAI
+// VALUE: c2d799a9bdcf46cd947a8487df16d627 (copy from image.js)
+
+// 2. in image.js
+// from:
+const app = new Clarifai.App({
+  apiKey: 'c2d799a9bdcf46cd947a8487df16d627'
+});
+// to:
+const app = new Clarifai.App({
+    apiKey: process.env.API_CLARIFAI
+});
