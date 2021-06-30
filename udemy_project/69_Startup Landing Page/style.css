@@ -18,18 +18,27 @@ h1 {
 
 hr {
   border: 1px solid #ffc107;
-  max-width: 75px;
+  width: 75px;
   opacity: 1;
 }
 
+.buffer {
+  height: 10rem;
+}
+
+section {
+  position: fixed;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .btn {
   font-weight: 700;
   border-radius: 300px;
   text-transform: uppercase;
-  position: fixed;
-  bottom: 30px;
-  left: calc(50% - 98px);
 }
 
 .btn-primary {
