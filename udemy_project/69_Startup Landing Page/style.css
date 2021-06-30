@@ -4,7 +4,7 @@ html {
   height: 100%;
   font-family: 'Monserrat', sans-serif;
   /* progressive css */
-  background: url(header.png) no-repeat center center fixed; 
+  background: url(logo.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,8 +17,8 @@ h1 {
 }
 
 hr {
-  border: 2px solid #ffc107;
-  max-width: 65px;
+  border: 1px solid #ffc107;
+  max-width: 75px;
   opacity: 1;
 }
 
@@ -27,6 +27,9 @@ hr {
   font-weight: 700;
   border-radius: 300px;
   text-transform: uppercase;
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 98px);
 }
 
 .btn-primary {
