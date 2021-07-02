@@ -1,1 +1,1 @@
-// to read hooks documents
+// to read hooks documentations
