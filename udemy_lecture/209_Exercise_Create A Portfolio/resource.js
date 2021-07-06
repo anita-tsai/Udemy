@@ -1,0 +1,10 @@
+// Resources
+// 1. Simplefolio
+// https://github.com/cobidev/simplefolio
+
+// 2. Logo Marker
+// https://hatchful.shopify.com/
+
+// 3. What is the difference between CSS and SCSS?
+// https://stackoverflow.com/questions/46400443/what-is-the-difference-between-css-and-scss
+
