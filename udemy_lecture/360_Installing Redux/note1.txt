@@ -1,0 +1,8 @@
+1) 360: Installing Redux
+
+1. colone your project_my-robofriends in the folder
+2. use vs code to open my-robofriends
+3. in first colone, you need to run "npm install" to make sure we have all necessary packages
+4. "npm start"
+5. "npm install redux"
+6. "npm i react-redux" 
