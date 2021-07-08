@@ -1,0 +1,20 @@
+1) 360: Installing Redux
+
+1. colone your project_my-robofriends in the folder
+2. use vs code to open my-robofriends
+3. in first colone, you need to run "npm install" to make sure we have all necessary packages
+4. "npm start"
+5. "npm install redux"
+6. "npm i react-redux" 
+
+
+2) 361: Redux Tookingit
+1. website: https://redux-toolkit.js.org/introduction/getting-started
+2. Purpose:
+    The Redux Toolkit package is intended to be the standard way to write Redux logic. 
+    It was originally created to help address three common concerns about Redux:
+
+    "Configuring a Redux store is too complicated"
+    "I have to add a lot of packages to get Redux to do anything useful"
+    "Redux requires too much boilerplate code"
+
